@@ -6,7 +6,9 @@
 "ZALI_BILL_HEADER"
 ],
 "ASSOCIATED":
-[],
+[
+"ZALI_I_BILL_ITEM"
+],
 "BASE":
 [],
 "ANNO_REF":

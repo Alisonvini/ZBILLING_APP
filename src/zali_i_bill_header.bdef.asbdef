@@ -12,6 +12,8 @@ authorization master ( instance )
   delete;
   field ( readonly : update, mandatory : create ) BillId;
 
+  association _item { create; }
+
   mapping for zali_bill_header
     {
       BillId             = bill_id;
@@ -27,4 +29,34 @@ authorization master ( instance )
       LastChangeDat      = lastchangedat;
       LocalLastChangeDat = locallastchangedat;
     }
+}
+
+define behavior for Zali_I_BILL_ITEM
+persistent table zali_bill_item
+lock dependent by _header
+authorization dependent by _header
+{
+  update;
+  delete;
+
+  field ( readonly : update, mandatory : create ) BillId, ItemNo;
+
+  association _header;
+
+  mapping for zali_bill_item
+  {
+    BillId      = bill_id;
+    ItemNo      = item_no;
+    MaterialId  = material_id;
+    Description = description;
+    Quantity    = quantity;
+    ItemAmount  = item_amount;
+    Currency    = currency;
+    Uom         = uom;
+    CreatedBy = createdby;
+    CreateDat = createdat;
+    LastChangedBy = lastchangedby;
+    LastChangeDat = lastchangedat;
+    LocalLastChangeDat = locallastchangedat;
+  }
 }

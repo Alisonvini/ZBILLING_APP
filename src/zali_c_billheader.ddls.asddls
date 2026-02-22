@@ -17,5 +17,6 @@ define root view entity Zali_C_BillHeader
       Createdat,
       Lastchangedby,
       Lastchangedat,
-      Locallastchangedat
+      Locallastchangedat,
+      _item : redirected to composition child ZALI_c_BILL_ITEM
 }
