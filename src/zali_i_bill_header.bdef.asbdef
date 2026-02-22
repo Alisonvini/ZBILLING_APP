@@ -1,0 +1,30 @@
+managed implementation in class zbp_ali_i_bill_header unique;
+strict ( 2 );
+
+define behavior for Zali_I_Bill_Header //alias <alias_name>
+persistent table zali_bill_header
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update, mandatory : create ) BillId;
+
+  mapping for zali_bill_header
+    {
+      BillId             = bill_id;
+      BillType           = bill_type;
+      BillDate           = bill_date;
+      CustomerId         = customer_id;
+      NetAmount          = net_amount;
+      Currency           = currency;
+      SalesOrg           = sales_org;
+      CreatedBy          = createdby;
+      CreateDat          = createdat;
+      LastChangedBy      = lastchangedby;
+      LastChangeDat      = lastchangedat;
+      LocalLastChangeDat = locallastchangedat;
+    }
+}

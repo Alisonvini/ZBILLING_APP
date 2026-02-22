@@ -1,0 +1,5 @@
+CLASS zbp_ali_i_bill_header DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zali_i_bill_header.
+ENDCLASS.
+
+CLASS zbp_ali_i_bill_header IMPLEMENTATION.
+ENDCLASS.

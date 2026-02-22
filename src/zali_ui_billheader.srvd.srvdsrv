@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Billing Document Head'
+define service ZALI_ui_BILLHEADER {
+  expose Zali_C_BillHeader as BillingDocumentHeader;
+}
